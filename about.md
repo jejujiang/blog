@@ -3,6 +3,7 @@ title: About
 permalink: /about/
 ---
 
-<p class="lead"><a href="http://github.com/gfjaru/Kiko">Kiko</a> is a theme for <a href="http://jekyllrb.com">Jekyll</a>, the static site generator.</p>
+ [Kiko](http://github.com/gfjaru/Kiko) is simple, lightweight theme. It's designed and developed by [@gfjaru](https://twitter.com/gfjaru).
 
-Kiko is simple, lightweight theme. It's designed and developed by [@gfjaru](https://twitter.com/gfjaru).
+[PaperCSS](http://www.getpapercss.com) is THE LESS FORMAL CSS FRAMEWORK. It's designed and developed by [Rhyne ](https://www.vlaservich.com/) and [fantastic contributors](https://github.com/papercss/papercss/graphs/contributors).
+

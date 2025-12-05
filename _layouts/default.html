@@ -10,20 +10,35 @@
   {{ seo }}
 </head>
 <body>
-  <div class="container">
-    {{ content }}
+  <div class="paper">
+<div class="paper container">
+  <nav class="border fixed split-nav">
+  <div class="nav-brand">
+      <h3><a href="{{ site.baseurl }}/">hello world</a></h3>
   </div>
-<script src="{{ site.baseurl }}/typed.js"></script>
-<script>
-    var typed = new Typed("#typed", {
-        stringsElement: "#strings",
-        backSpeed: 50,
-        typeSpeed: 50,
-        backDelay: 2000,
-        loop: true,
-        smartBackspace: true,
-        showCursor: true,
-    });
-</script>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <label for="collapsible1">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </label>
+    <div class="collapsible-body">
+     <ul class="inline">
+     {% for nav in site.nav %}
+      {% if nav.remote %}
+      <li><a href="{{ nav.href }}">{{ nav.name }}</a></li>
+      {% else %}
+      <li><a href="{{ site.baseurl }}/{{ nav.localpath }}">{{ nav.name }}</a></li>
+      {% endif %}
+    {% endfor %}
+     </ul>
+    </div>
+  </div>
+</nav>
+
+    {{ content }}
+</div>
+  </div>
 </body>
 </html>
