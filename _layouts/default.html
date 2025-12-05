@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
-  <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
-  <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
-  {{ seo }}
-</head>
-<body>
-  <div class="paper">
-  <nav class="border fixed split-nav">
-  <div class="nav-brand">
-      <h3><a href="{{ site.baseurl }}/">hello world</a></h3>
-  </div>
-  <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible1">
-    <label for="collapsible1">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </label>
-    <div class="collapsible-body">
-     <ul class="inline">
-     {% for nav in site.nav %}
-      {% if nav.remote %}
-      <li><a href="{{ nav.href }}">{{ nav.name }}</a></li>
-      {% else %}
-      <li><a href="{{ site.baseurl }}/{{ nav.localpath }}">{{ nav.name }}</a></li>
-      {% endif %}
-    {% endfor %}
-     </ul>
-    </div>
-  </div>
-</nav>
-
-    {{ content }}
-</div>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+		<link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
+		{{ seo }}
+	</head>
+	<body>
+		<header>
+			<nav class="border fixed split-nav">
+				<div class="nav-brand">
+					<h3><a href="{{ site.baseurl }}/">hello world</a></h3>
+				</div>
+				<div class="collapsible">
+					<input id="collapsible1" type="checkbox" name="collapsible1">
+					<label for="collapsible1">
+						<div class="bar1"></div>
+						<div class="bar2"></div>
+						<div class="bar3"></div>
+					</label>
+					<div class="collapsible-body">
+						<ul class="inline">
+							{% for nav in site.nav %}
+							{% if nav.remote %}
+							<li><a href="{{ nav.href }}">{{ nav.name }}</a></li>
+							{% else %}
+							<li><a href="{{ site.baseurl }}/{{ nav.localpath }}">{{ nav.name }}</a></li>
+							{% endif %}
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="paper">
+			{{ content }}
+		</div>
+	</body>
 </html>
