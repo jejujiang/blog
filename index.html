@@ -1,21 +1,23 @@
----
-layout: default
----
-{% if site.posts.size == 0 %}
-  <h2>No post found</h2>
-{% else %}
-{% for post in site.posts %}
-<div class="row mt-4 flex-center child-borders">
-<div class="card" style="width: 66rem;">
-  <div class="card-body">
-      <h4 class="card-title">{{ post.title }}</h4>
-    <h5 class="card-subtitle">
-      <time>{{ post.date | date_to_string }}</time>
-    </h5>
-    <p class="card-text">{{ post.excerpt }}</p>
-    <a class="card-link" href="{{ site.baseurl }}{{ post.url }}"><button>Read more</button></a>
-  </div>
-</div>
-</div>
-{% endfor %}
-{% endif %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="text-center">
+      <h1>{{ site.title }}</h1>
+      <p>The world is beatiful.</p>
+    </header>
+
+    <main class="paper container">
+      <h1 class="text-center"><strong>hello world</strong></h1>
+    </main>
+
+    <footer class="text-center">
+      <p>use heart to make this website.</p>
+    </footer>
+  </body>
+</html>
