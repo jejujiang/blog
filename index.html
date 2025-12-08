@@ -1,26 +1,17 @@
 ---
 ---
-
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }}</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header class="text-center">
-      <h1>{{ site.title }}</h1>
-      <p>The world is beatiful.</p>
-    </header>
-
-    <main class="paper container">
-      <h1 class="text-center"><strong>hello world</strong></h1>
-    </main>
-
-    <footer class="text-center">
-      <p>use heart to make this website.</p>
-    </footer>
-  </body>
+    <link rel="stylesheet" href="/assets/css/paper.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <body>
+      <h1 class="text-center"><strong>{{ site.title }}</strong></h1>
+      <div class="row">
+      {% include card.html %}
+      </div>
+    </body>
 </html>
