@@ -1,14 +1,1 @@
 title: 'hello world'
-
-collections:
-  pages:
-    output: true
-    permalink: /:path/
-    
-defaults:
-  - scope:
-      path: "_pages"
-      type: "pages"
-    values:
-      layout: "page"
-      nav_order: 99  # 默认值，可以在具体页面覆盖
