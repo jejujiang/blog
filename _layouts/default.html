@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title>
-  <link rel="stylesheet" href="/assets/css/paper.css">
-  <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
-<div class="container">
-  <div class="paper">
-    <div class="title">
-      <div class="row flex-center">
-        <div class="text-center">
-          <h1>🫧{{ site.title }}🌼</h1>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/css/paper.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+
+  <body>
+        <nav class="border fixed split-nav">
+      <div class="nav-brand">
+        <h3><a href="/">🫧{{ site.title }}🌼</a></h3>
+      </div>
+      <div class="collapsible">
+        <input id="collapsible1" type="checkbox" name="collapsible1">
+        <label for="collapsible1">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </label>
+        <div class="collapsible-body">
+          <ul class="inline">
+            <li><a href="#">Hi</a></li>
+            <li><a href="#">Hey</a></li>
+            <li><a href="#">Ha</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-    {{ content }}
- </div>
-</div>
-</body>
-</html>
+    </nav>
 
+    <div class="container-lg">
+      <div class="paper margin-large padding-left-large">
+        {{ content }}
+      </div>
+    </div>
+
+      <div class="row flex-center">
+        <p>Made with 💛 by <a href="https://www.getpapercss.com/" target="_blank">PaperCSS</a> and <a href="https://jekyllrb.com/" target="blank">Jekyll </a>!</p>
+      </div>
+  </body>
+</html>
