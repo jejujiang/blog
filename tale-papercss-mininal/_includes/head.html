@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+  {% if page.title %}
+    {{ page.title }} | {{ site.title }}
+  {% else %}
+    {{ site.title }}
+  {% endif %}
+</title>
+
+<!-- PaperCSS -->
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.9.0/dist/paper.min.css">
+
+<!-- Rouge syntax highlighting (comes with PaperCSS) -->
+<style>
+  /* 确保代码块有基本的样式 */
+  pre {
+    overflow-x: auto;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+  }
+  
+  code {
+    font-family: 'Courier New', monospace;
+    background: #f8f9fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+  }
+  
+  pre code {
+    background: transparent;
+    padding: 0;
+  }
+  
+  /* 文章内容的间距 */
+  .post-content > * {
+    margin-bottom: 1rem;
+  }
+  
+  .post-content > h2,
+  .post-content > h3,
+  .post-content > h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+</style>

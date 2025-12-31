@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<article>
+  <header class="border padding margin-bottom">
+    <h1 class="no-margin-top text-center">{{ page.title }}</h1>
+    
+    <div class="row flex-center margin-top">
+      <div class="col-6 text-center">
+        <span class="badge">
+          📅 {{ page.date | date: "%Y年%m月%d日" }}
+        </span>
+      </div>
+      <div class="col-6 text-center">
+        {% if page.tags %}
+          {% for tag in page.tags %}
+          <span class="badge secondary">{{ tag }}</span>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </header>
+  
+  <div class="post-content border padding">
+    {{ content }}
+  </div>
+  
+  {% if page.previous or page.next %}
+  <nav class="border padding margin-top">
+    <div class="row">
+      <div class="col-6">
+        {% if page.previous %}
+        <p class="small text-secondary">上一篇</p>
+        <a href="{{ page.previous.url | relative_url }}" class="paper-btn width-100">
+          ← {{ page.previous.title | truncate: 25 }}
+        </a>
+        {% endif %}
+      </div>
+      
+      <div class="col-6 text-right">
+        {% if page.next %}
+        <p class="small text-secondary">下一篇</p>
+        <a href="{{ page.next.url | relative_url }}" class="paper-btn width-100">
+          {{ page.next.title | truncate: 25 }} →
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+  {% endif %}
+</article>

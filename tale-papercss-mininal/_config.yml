@@ -1,0 +1,36 @@
+# Site settings
+title: "Minimal Tale"
+description: "A minimal Tale-style blog with PaperCSS"
+baseurl: ""
+url: "https://yourdomain.com"
+
+# Author
+author:
+  name: "Your Name"
+  email: "your.email@example.com"
+
+# Navigation
+nav_links:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/"
+  - title: "Archive"
+    url: "/archive/"
+  - title: "Tags"
+    url: "/tags/"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# PaperCSS theme
+theme_color: "#3498db"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
