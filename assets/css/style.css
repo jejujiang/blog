@@ -16,10 +16,12 @@ a::after {
   bottom: -3px;         /* 定位在链接文字下方3px处 */
   left: 50%;            /* 初始位置在链接水平中心 */
   background: #ff6b6b;  /* 下划线颜色为珊瑚红色 */
+  --webkit-transition: all 0.3s ease;
+  --moz-transition: all 0.3s ease;
   transition: all 0.3s ease; /* 添加0.3秒的过渡动画 */
 }
 
-a:hover::after {
+a:hover:after {
   width: 80%;    /* 宽度变为链接的80% */
   left: 10%;        /* 左右边距各留20%，从中间向两边展开 */
 }
