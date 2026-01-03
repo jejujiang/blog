@@ -19,9 +19,7 @@ a::after {
   transition: all 0.3s ease; /* 添加0.3秒的过渡动画 */
 }
 
-a:hover::after,
-a:active::after,
-a:focus::after {
+a:hover::after {
   width: 80%;    /* 宽度变为链接的80% */
   left: 10%;        /* 左右边距各留20%，从中间向两边展开 */
 }
