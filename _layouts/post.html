@@ -2,40 +2,38 @@
 layout: default
 ---
 
-<main id="main" class="main-content" aria-label="Content">
-  <article class="h-entry">
-    {% include page-image.html %}
-    <div class="page-wrapper">
-      <header class="page-header">
-        {% assign title = page.title | markdownify | strip_html %}
-        {% if page.link %}
-          <h1 id="page-title" class="page-title p-name"><a href="{{ page.link }}">{{ title }} <span class="link-arrow">&rarr;</span></a></h1>
-        {% else %}
-          <h1 id="page-title" class="page-title p-name">{{ title }}</h1>
-        {% endif %}
-      </header>
+<div class="post">
+  <div class="post-info">
+    <span>Written by</span>
+    {% if page.author %}
+        {{ page.author }}
+    {% else %}
+        {{ site.author.name }}
+    {% endif %}
 
-      <div class="page-sidebar">
-        {% include page-author.html %}
-        {% include page-categories.html %}
-        {% include page-tags.html %}
-      </div>
+    {% if page.date %}
+      <br>
+      <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
+    {% endif %}
+  </div>
 
-      <div class="page-content">
-        <div class="e-content">
-          {{ content }}
-        </div>
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-line"></div>
 
-        {% if page.share %}
-          {% include social-share.html %}
-        {% endif %}
+  {{ content }}
+</div>
 
-        {% if site.disqus.shortname %}
-          {% include disqus-comments.html %}
-        {% endif %}
+{% if page.comments %}
+  {% include disqus_comments.html %}
+{% endif %}
 
-        {% include page-pagination.html %}
-      </div>
-    </div>
-  </article>
-</main>
+<div class="pagination">
+  {% if page.next.url %}
+    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
+  {% endif %}
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
+  {% endif %}
+
+  <a href="#" class="top">Top</a>
+</div>
