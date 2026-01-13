@@ -3,3 +3,67 @@
 ---
 
 @import 'tale';
+
+/* 基础表格样式 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.95em;
+  line-height: 1.4;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+/* 表头样式 */
+thead {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #e9ecef;
+}
+
+th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  border-bottom: 2px solid #e9ecef;
+}
+
+/* 表格单元格样式 */
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e9ecef;
+  color: #495057;
+}
+
+/* 斑马条纹效果（可选） */
+tbody tr:nth-child(even) {
+  background-color: #fdfdfe;
+}
+
+/* 响应式处理 */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: none;
+    border: 1px solid #e9ecef;
+  }
+  
+  th,
+  td {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+}
+
+/* 表格标题（如有） */
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  color: #6c757d;
+  font-size: 0.9em;
+  text-align: center;
+}
