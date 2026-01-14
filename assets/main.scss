@@ -4,66 +4,47 @@
 
 @import 'tale';
 
-/* 基础表格样式 */
+/* 表格基础样式 */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5em 0;
-  font-size: 0.95em;
-  line-height: 1.4;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  border-radius: 3px;
-  overflow: hidden;
+  margin: 1.5rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
 }
 
 /* 表头样式 */
-thead {
-  background-color: #f8f9fa;
-  border-bottom: 2px solid #e9ecef;
-}
-
 th {
+  background-color: #f8f8f8;
+  border-bottom: 2px solid #e0e0e0;
   padding: 12px 15px;
   text-align: left;
   font-weight: 600;
-  color: #2c3e50;
-  border-bottom: 2px solid #e9ecef;
 }
 
-/* 表格单元格样式 */
+/* 单元格样式 */
 td {
-  padding: 12px 15px;
-  border-bottom: 1px solid #e9ecef;
-  color: #495057;
+  border-bottom: 1px solid #eee;
+  padding: 10px 15px;
+  vertical-align: top;
 }
 
-/* 斑马条纹效果（可选） */
-tbody tr:nth-child(even) {
-  background-color: #fdfdfe;
+/* 行悬停效果 */
+tr:hover td {
+  background-color: #fafafa;
 }
 
-/* 响应式处理 */
-@media (max-width: 768px) {
-  table {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    box-shadow: none;
-    border: 1px solid #e9ecef;
-  }
-  
-  th,
-  td {
-    padding: 8px 12px;
-    font-size: 0.9em;
-  }
+/* 表体首行强调 */
+tbody tr:first-child td {
+  border-top: 1px solid #e8e8e8;
 }
 
-/* 表格标题（如有） */
-caption {
-  caption-side: bottom;
-  padding: 10px;
-  color: #6c757d;
-  font-size: 0.9em;
-  text-align: center;
+/* 表尾样式 */
+tfoot td {
+  border-top: 2px solid #e0e0e0;
+  padding-top: 12px;
+  font-style: italic;
+  color: #666;
 }
