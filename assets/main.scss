@@ -4,6 +4,23 @@
 
 @import 'tale';
 
+/* 隐藏所有滚动条但保留滚动功能 */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* 确保内容仍可滚动 */
+html, body {
+  height: 100%;
+  overflow: auto;
+}
+
+
 /* 表格基础样式 */
 table {
   width: 100%;
