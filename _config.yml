@@ -7,7 +7,7 @@ name:               "Jeju"
 description:        "a clean, lightweight and minimalistic blog theme for jekyll"
 
 # URL
-baseurl:            "https://jejujiang.github.io"
+url:                "https://jejujiang.github.io"
 baseurl:            "/blog" #For Root Domain
 permalink:          /:year/:month/:day/:title/
 
