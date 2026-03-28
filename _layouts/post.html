@@ -6,10 +6,12 @@ layout: default
     <a href="{{ site.baseurl }}/">{{ site.name }}</a>
   </h1>
 </header>
-<div class="content post">
+<div class="content post paper">
   <h1 class="post-title">{{ page.title }}</h1>
   <div class="post-date">
     <time>{{ page.date | date_to_string }}</time>
   </div>
+  <div class="article">
   {{ content }}
+  </div>
 </div>
