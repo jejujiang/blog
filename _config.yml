@@ -1,9 +1,9 @@
 # Basic
-name:               "Jeju"
-description:        "hello world"
+name:               "Tale"
+description:        "tale cafe"
 
 # jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
-author:             "jeju"
+author:             "kiko"
 #twitter:
 #  username:         "gfjaru"
 #facebook:
@@ -25,9 +25,6 @@ nav:
   - name:           "Download"
     remote:         true
     href:           "//github.com/gfjaru/Kiko/releases"
-  - name:           "English"
-    remote:         false
-    localpath:      "english"
 
 # Sass
 sass:
