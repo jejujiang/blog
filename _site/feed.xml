@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<channel>
-<<<<<<< HEAD
-		<title>Tale</title>
-		<link>http://localhost:4000</link>
-		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-=======
 		<title>Tale Café</title>
 		<link></link>
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
->>>>>>> d47f03143d5be00e2d000d23bb34165eee00a71f
 		
 			<item>
 				<title>Get Rich</title>
@@ -35,8 +29,8 @@
 &lt;p&gt;财富自由，经济独立，精神独立，对自己不喜欢的事物说：不，需要节俭、勤奋、聪明、毅力、孤独。提高认知，是最重要的一环。生命是最宝贵的事物，时间是最稀缺的资源。如果有一天，我拥有了一个亿，大概率还会过现在的日子，因为现在的生活，是我想拥有的。拥有了财富，会让生活更精彩。&lt;/p&gt;
 </description>
 				<pubDate>Tue, 31 Mar 2026 00:00:00 +0800</pubDate>
-				<link>http://localhost:4000/2026/03/31/get-rich/</link>
-				<guid isPermaLink="true">http://localhost:4000/2026/03/31/get-rich/</guid>
+				<link>/2026/03/31/get-rich/</link>
+				<guid isPermaLink="true">/2026/03/31/get-rich/</guid>
 			</item>
 		
 			<item>
@@ -87,8 +81,8 @@
 
 </description>
 				<pubDate>Wed, 29 Mar 2017 00:00:00 +0800</pubDate>
-				<link>http://localhost:4000/2017/03/29/new-concept-english/</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/03/29/new-concept-english/</guid>
+				<link>/2017/03/29/new-concept-english/</link>
+				<guid isPermaLink="true">/2017/03/29/new-concept-english/</guid>
 			</item>
 		
 			<item>
@@ -207,8 +201,8 @@
 &lt;p&gt;Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
 </description>
 				<pubDate>Sun, 09 Aug 2015 00:00:00 +0800</pubDate>
-				<link>http://localhost:4000/2015/08/09/example-content/</link>
-				<guid isPermaLink="true">http://localhost:4000/2015/08/09/example-content/</guid>
+				<link>/2015/08/09/example-content/</link>
+				<guid isPermaLink="true">/2015/08/09/example-content/</guid>
 			</item>
 		
 	</channel>
