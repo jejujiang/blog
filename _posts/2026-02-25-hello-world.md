@@ -3,5 +3,7 @@ title: hello world
 ---
 
 ```ruby
-puts "hello world"
+# Output "hello world"
+greet = ->(name){ puts "hello #{name}" }
+greet.("world")
 ```
