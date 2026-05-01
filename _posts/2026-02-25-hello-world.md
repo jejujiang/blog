@@ -2,8 +2,15 @@
 title: hello world
 ---
 
-```ruby
-# Output "hello world"
-greet = ->(name){ puts "hello #{name}" }
-greet.("world")
+当把表当作结构体使用时，可以把索引当作成员名称使用（`a.name`等价于`a["name"]`）。
+
+`a.x`代表的是`a["x]`，即由字符串`"x"`索引的表；而　`a[x]`则是指由变量 `x`对应的值索引的表。
+
+```lua
+a = {}
+x = "y"
+a[x] = 10           -- 把10放在字段“y“中
+a[x]       --> 10   -- 字段“y”的值
+a.x        --> nil  -- 字段“x”的值（未定义）
+a.y        --> 10   -- 字段“y”的值
 ```
