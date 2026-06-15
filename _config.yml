@@ -3,17 +3,12 @@
 # # # # # # # #
 
 # Basic
-name:               "Kiko"
-description:        "a clean, lightweight and minimalistic blog theme for jekyll"
+name:               "Hope"
+description:        "Hope rises. Belief stands. Trust grows."
 
 # jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
 url:                "//jejujiang.github.io"
 author:             "gfjaru"
-twitter:
-  username:         "gfjaru"
-#facebook:
-#  app_id:           1234
-#    publisher:      1234
 
 # URL
 baseurl:            "/blog"
