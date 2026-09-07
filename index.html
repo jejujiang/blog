@@ -1,33 +1,19 @@
 ---
 layout: default
 ---
-<header class="masthead">
-  <h1 class="masthead-title">
-    <a href="http://43.142.25.171">{{ site.name }}<span></span></a>
-  </h1>
-  <nav class="masthead-nav">
-    {% for nav in site.nav %}
-      {% if nav.remote %}
-      <a href="{{ nav.href }}">{{ nav.name }}</a>
-      {% else %}
-      <a href="{{ site.baseurl }}/{{ nav.localpath }}">{{ nav.name }}</a>
-      {% endif %}
-    {% endfor %}
-  </nav>
-</header>
-<div class="content list">
-{% if site.posts.size == 0 %}
-  <h2>No post found</h2>
-{% else %}
-{% for post in site.posts %}
-  <div class="list-item">
-    <h2 class="list-post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-    </h2>
-    <div class="list-post-date">
-      <time>{{ post.date | date_to_string }}</time>
-    </div>
-  </div>
-{% endfor %}
-{% endif %}
+<div class="home">
+	<section class="site-header">
+		<h1 class="smallcap"><a class="site-title" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a></h1>
+		{% include nav.html %}
+		{% include intro.html %}
+	</section>
+	<section>
+		<ul class="post-list">
+			{% for post in site.posts %}
+			<li>
+				<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+			</li>
+			{% endfor %}
+		</ul>
+	</section>
 </div>
